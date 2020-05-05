@@ -31,7 +31,9 @@
     "temp": "~0.8.3"
   },
   "scripts": {
-    "test": "./node_modules/.bin/grunt test && mocha tmp/test --recursive"
+    "test": "./node_modules/.bin/grunt test && mocha tmp/test --recursive",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "babel-traverse": "^6.0.0",
@@ -41,6 +43,8 @@
     "gglobby": "0.0.3",
     "minimist": "~1.2.0",
     "mkdirp": "~0.5.1",
-    "speakingurl": "13.0.0"
-  }
+    "speakingurl": "13.0.0",
+    "snyk": "^1.319.0"
+  },
+  "snyk": true
 }
